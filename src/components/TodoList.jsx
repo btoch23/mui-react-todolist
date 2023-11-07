@@ -86,7 +86,7 @@ export default function TodoList() {
                     sx={{
                         width: '100%', 
                         maxWidth: 500, 
-                        bgcolor: 'white',
+                        bgcolor: 'background.paper',
                         fontFamily: 'inherit'
                     }}
                 >
