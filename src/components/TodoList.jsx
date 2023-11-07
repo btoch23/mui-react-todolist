@@ -20,7 +20,7 @@ const styles = {
     m: 3,
     backgroundColor: 'white',
     paddingBottom: '40px',
-    margin: '5rem 0 3rem 0',
+    margin: '3rem 0 3rem 0',
     padding: '1rem',
     position: 'relative',
     webkitBoxShadow: '0px 15px 0px -5px #ef8257, 0px 30px 0px -10px #f39e7c, 5px 5px 15px 5px rgba(0,0,0,0)', 
