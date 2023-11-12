@@ -143,7 +143,7 @@ export default function TodoList() {
                             justifyContent: 'space-between'
                         }}
                     >
-                        {todos.length} task{todos.length !== 1 && 's'} left
+                        {taskList.length} task{taskList.length !== 1 && 's'} left
                         <span>
                             {filterList}
                         </span>
