@@ -134,14 +134,6 @@ export default function TodoList() {
                 </Typography>
                     <TodoForm addTodo={addTodo} />
                     {taskList}
-                    {/* {todos.map((todo) => {
-                        return <TodoItem 
-                            todo={todo} 
-                            key={todo.id} 
-                            remove={removeTodo} 
-                            toggle={() => toggleTodo(todo.id)}    
-                        />
-                    })} */}
                     <Typography 
                         variant='h5'
                         component='h5'
