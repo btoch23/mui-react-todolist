@@ -1,6 +1,6 @@
 # Overview
 
-A clean and simple todo list app that utilizes local storage to keep tasks populated. Users can add tasks, mark them as completed, and delete them. A running counter at the bottom tells the user how many tasks remain in their list.
+A clean and simple todo list app that utilizes local storage to keep tasks populated. Users can add tasks, mark them as completed, and delete them. A running counter at the bottom tells the user how many tasks remain in their list and a group of buttons allows them to filter their list by completed, active, or all tasks.
 
 The app is currently hosted on Vercel: https://mui-react-todolist.vercel.app/
 
