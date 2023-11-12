@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import TodoItem from './TodoItem';
 import TodoForm from './TodoForm';
 import { Box, Typography, createTheme, ThemeProvider } from '@mui/material';
+import FilterBtn from './FilterBtn';
 
 const theme = createTheme({
     typography: {
@@ -35,10 +36,28 @@ const getInitialData = () => {
     const data = JSON.parse(localStorage.getItem('todos'))
     if (!data) return [];
     return data;
-} 
+}
+
+const FILTER_MAP = {
+    All: () => true,
+    Active: (todo) => !todo.completed,
+    Completed: (todo) => todo.completed
+}
+
+const FILTER_NAMES = Object.keys(FILTER_MAP);
 
 export default function TodoList() {
     const [todos, setTodos] = useState(getInitialData);
+    const [filter, setFilter] = useState('All');
+
+    const filterList = FILTER_NAMES.map((name) => (
+        <FilterBtn 
+            key={name}
+            name={name}
+            isPressed={name === filter}
+            setFilter={setFilter}
+        />
+    ))
 
     useEffect(() => {
         localStorage.setItem(
@@ -75,6 +94,17 @@ export default function TodoList() {
         });
     };
 
+    const taskList = todos
+        .filter(FILTER_MAP[filter])
+        .map((todo) => (
+            <TodoItem 
+                todo={todo}
+                key={todo.id}
+                remove={removeTodo}
+                toggle={() => toggleTodo(todo.id)}
+            />
+        ))
+
     return (
         <ThemeProvider theme={theme}>
             <Box
@@ -103,24 +133,31 @@ export default function TodoList() {
                     what&apos;s on the docket for today? 
                 </Typography>
                     <TodoForm addTodo={addTodo} />
-                    {todos.map((todo) => {
+                    {taskList}
+                    {/* {todos.map((todo) => {
                         return <TodoItem 
                             todo={todo} 
                             key={todo.id} 
                             remove={removeTodo} 
                             toggle={() => toggleTodo(todo.id)}    
                         />
-                    })}
+                    })} */}
                     <Typography 
                         variant='h5'
                         component='h5'
                         sx={{
+                            display: 'flex',
                             marginTop: '10px',
-                            textAlign: 'center'
+                            justifyContent: 'space-between'
                         }}
                     >
                         {todos.length} task{todos.length !== 1 && 's'} left
+                        <span>
+                            {filterList}
+                        </span>
                     </Typography>
+                    
+                    
                 </List>
             </Box>
             <h5 style={{textAlign: 'center', fontWeight: 100, fontSize: '1rem'}}>
