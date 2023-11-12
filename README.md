@@ -4,6 +4,17 @@ A clean and simple todo list app that utilizes local storage to keep tasks popul
 
 The app is currently hosted on Vercel: https://mui-react-todolist.vercel.app/
 
+# Components
+
+<ul>
+  <li>TodoItem: Each individual task that the user adds</li>
+  <li>TodoForm: The form allowing the user to add tasks</li>
+  <li>FilterBtn: The basic button template for the filter buttons</li>
+  <li>
+    TodoList: The list that displays the form and each added task. This component contains all      of the state for the application and handles the logic for all of the buttons and checkboxes
+  </li>
+</ul>
+
 # Technologies Used
 
 <ul>
