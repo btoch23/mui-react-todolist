@@ -19,10 +19,11 @@ The app is currently hosted on Vercel: https://mui-react-todolist.vercel.app/
 
 <ul>
   <li>React</li>
+  <li>Javascript</li>
   <li>Material UI</li>
   <li>Vite</li>
-  <li>Javascript</li>
   <li>CSS</li>
+  <li>HTML</li>
 </ul>
 
 # Contact
