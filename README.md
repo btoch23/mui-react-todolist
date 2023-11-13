@@ -4,6 +4,8 @@ A clean and simple todo list app that utilizes local storage to keep tasks popul
 
 The app is currently hosted on Vercel: https://mui-react-todolist.vercel.app/
 
+![Screenshot 2023-11-12 104039](https://github.com/btoch23/mui-react-todolist/assets/143453855/2768d2fc-2ade-4560-bed8-ba66cfbd3f04)
+
 # Components
 
 <ul>
