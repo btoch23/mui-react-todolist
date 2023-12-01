@@ -30,20 +30,20 @@ export default function TodoItem ({ todo, remove, toggle }) {
                 role={undefined} 
                 dense
             >
-            <ListItemIcon>
-                <Checkbox
-                edge="start"
-                checked={todo.completed}
-                tabIndex={-1}
-                disableRipple
-                inputProps={{ 'aria-labelledby': labelId }}
-                onChange={toggle}
-                icon={<RadioButtonUncheckedIcon />}
-                checkedIcon={<CheckCircleOutlineIcon />}
-                color='warning'
-                />
-            </ListItemIcon>
-            <ListItemText id={labelId} primary={todo.text} />
+                <ListItemIcon>
+                    <Checkbox
+                    edge="start"
+                    checked={todo.completed}
+                    tabIndex={-1}
+                    disableRipple
+                    inputProps={{ 'aria-labelledby': labelId }}
+                    onChange={toggle}
+                    icon={<RadioButtonUncheckedIcon />}
+                    checkedIcon={<CheckCircleOutlineIcon />}
+                    color='warning'
+                    />
+                </ListItemIcon>
+                <ListItemText id={labelId} primary={todo.text} />
             </ListItemButton>
         </ListItem>
     );
