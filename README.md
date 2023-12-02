@@ -30,4 +30,4 @@ The app is currently hosted on Vercel: https://mui-react-todolist.vercel.app/
 
 # Contact
 
-email: btoch23@gmail.com
+email: brian.toch23@gmail.com
